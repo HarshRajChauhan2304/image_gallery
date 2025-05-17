@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Image Gallery</title>
+  <link rel="stylesheet" href="image.css">
+</head>
+<body>
+  <div class="gallery-container">
+    <h1>Full Screen Image Gallery</h1>
+
+    <!-- Gallery Grid -->
+    <div class="image-grid">
+      <div class="image-item">
+        <img src="image/imag1.jpeg" alt="Image 1" onclick="openModal(0)">
+      </div>
+      <div class="image-item">
+        <img src="image/imag2.jpeg" alt="Image 2" onclick="openModal(1)">
+      </div>
+      <div class="image-item">
+        <img src="image/imag3.jpeg" alt="Image 3" onclick="openModal(2)">
+      </div>
+      <div class="image-item">
+        <img src="image/imag4.jpeg" alt="Image 4" onclick="openModal(3)">
+      </div>
+      <div class="image-item">
+        <img src="image/imag5.jpeg" alt="Image 5" onclick="openModal(4)">
+      </div>
+    </div>
+
+    <!-- Modal for displaying images -->
+    <div class="modal" id="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="nav-buttons">
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+      <img class="modal-content" id="modal-image">
+      <div class="modal-caption" id="caption"></div>
+    </div>
+  </div>
+
+  
+  <script src="image.js"></script>
+</body>
+</html>
